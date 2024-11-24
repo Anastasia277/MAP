@@ -1,1 +1,2 @@
 # MAP
+## exercitiul gi
