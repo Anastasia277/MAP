@@ -3,10 +3,10 @@ from collections import deque
 
 # Structura unui nod în arborele binar
 class Node:
-    def __init__(self, key):
-        self.left = None
-        self.right = None
-        self.val = key
+    def __init__(self, key):#init este o functie cunoscuta ca un constructor pt. a initializa obiectele 
+        self.left = None #copilul din stanga al nodului curent.
+        self.right = None #copilul din dreapta al nodului curent.
+        self.val = key #valoarea nodului curent
 
 # Funcție pentru inserare în arbore (pentru a construi arborele binar ordonat)
 def insert(root, key):
@@ -18,6 +18,7 @@ def insert(root, key):
         else:
             root.right = insert(root.right, key)
     return root
+
 
 # Traversare pre-ordine
 def preorder(root):
@@ -62,7 +63,7 @@ def build_random_tree(num_elements, min_value, max_value):
     return root
 
 # Exemplu de utilizare
-root = build_random_tree(5, 1, 100)
+root = build_random_tree(5, 1, 10)# 5 elemente intre 1 si 10
 
 print("Pre-ordine:")
 preorder(root)
