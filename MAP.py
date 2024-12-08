@@ -8,7 +8,6 @@ class Node:
         self.right = None #copilul din dreapta al nodului curent.
         self.val = key #valoarea nodului curent
 
-# Funcție pentru inserare în arbore (pentru a construi arborele binar ordonat)
 def insert(root, key):
     if root is None:
         return Node(key)
