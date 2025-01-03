@@ -3,10 +3,10 @@ from collections import deque
 
 # Structura unui nod în arborele binar
 class Node:
-    def __init__(self, key):#init este o functie cunoscuta ca un constructor pt. a initializa obiectele 
-        self.left = None #copilul din stanga al nodului curent.
-        self.right = None #copilul din dreapta al nodului curent.
-        self.val = key #valoarea nodului curent
+    def __init__(self, key): 
+        self.left = None 
+        self.right = None 
+        self.val = key 
 
 def insert(root, key):
     if root is None:
