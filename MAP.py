@@ -1,7 +1,7 @@
 import random
 from collections import deque
 
-# Structura unui nod în arborele binar
+# Structura unui nod in arborele binar
 class Node:
     def __init__(self, key): 
         self.left = None 
@@ -17,7 +17,6 @@ def insert(root, key):
         else:
             root.right = insert(root.right, key)
     return root
-
 
 # Traversare pre-ordine
 def preorder(root):
@@ -40,7 +39,7 @@ def postorder(root):
         postorder(root.right)
         print(root.val, end=" ")
 
-# Traversare pe niveluri (level-order)
+# Traversare pe niveluri 
 def level_order(root):
     if root is None:
         return
@@ -53,7 +52,7 @@ def level_order(root):
         if node.right:
             queue.append(node.right)
 
-# Construire arbore binar ordonat cu elemente aleatorii
+
 def build_random_tree(num_elements, min_value, max_value):
     root = None
     for _ in range(num_elements):
@@ -61,8 +60,7 @@ def build_random_tree(num_elements, min_value, max_value):
         root = insert(root, key)
     return root
 
-# Exemplu de utilizare
-root = build_random_tree(5, 1, 10)# 5 elemente intre 1 si 10
+root = build_random_tree(5, 1, 10)
 
 print("Pre-ordine:")
 preorder(root)
