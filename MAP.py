@@ -52,6 +52,19 @@ def level_order(root):
         if node.right:
             queue.append(node.right)
 
+# Functia de afisare a arborelui binar 
+def print_tree(root, level=0, prefix="Root: "):
+    if root is not None:
+        print(" " * (level * 4) + prefix + str(root.val))
+        if root.left or root.right:  # Doar dacă are copii
+            if root.left:
+                print_tree(root.left, level + 1, "L--- ")
+            else:
+                print(" " * ((level + 1) * 4) + "L--- None")
+            if root.right:
+                print_tree(root.right, level + 1, "R--- ")
+            else:
+                print(" " * ((level + 1) * 4) + "R--- None")
 
 def build_random_tree(num_elements, min_value, max_value):
     root = None
@@ -61,6 +74,10 @@ def build_random_tree(num_elements, min_value, max_value):
     return root
 
 root = build_random_tree(5, 1, 10)
+
+
+print("Arborele binar:")
+print_tree(root)
 
 print("Pre-ordine:")
 preorder(root)
